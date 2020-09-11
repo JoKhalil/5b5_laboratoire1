@@ -3,4 +3,8 @@
     <string name="textEmail">Votre email</string>
     <string name="textPassword">Entrez votre mot de passe</string>
     <string name="checkBoxPassword">Afficher votre mot de passe</string>
+    <string name="buttonValide">VALIDER MOT DE PASSE</string>
+    <string name="textViewPasswordValide">Le mot de passe est valide</string>
+    <string name="textViewPasswordInvalide">Le mot de passe est invalide</string>
+
 </resources>

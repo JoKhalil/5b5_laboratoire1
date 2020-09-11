@@ -46,19 +46,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onButtonValideClicked(View view) {
-        final String VALIDE = "Le mot de passe est valide";
-        final String NON_VALIDE = "Le mot de passe n'est pas valide";
+//        final String VALIDE = textViewPassword;
+//        final String NON_VALIDE = textViewPassword.toString();
 
         if (isValidPassword(textPassword.getText().toString().trim())) {
             //textViewPassword.setText(null);
             textViewPassword.setVisibility(View.VISIBLE);
-            textViewPassword.setText(VALIDE);
-            textViewPassword.setTextColor(Color.GREEN);
+            textViewPassword.setText(R.string.textViewPasswordValide);
+            textViewPassword.setTextColor(getResources().getColor(R.color.Vert));
         } else {
             //textViewPassword.setText(null);
             textViewPassword.setVisibility(View.VISIBLE);
-            textViewPassword.setText(NON_VALIDE);
-            textViewPassword.setTextColor(Color.RED);
+            textViewPassword.setText(R.string.textViewPasswordInvalide);
+            textViewPassword.setTextColor(getResources().getColor(R.color.Rouge));
         }
 
     }
@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         Pattern pattern;
         Matcher matcher;
 
-        final String PASSWORD_PATTERN = "^([A-Z] + [a-z] + [0-9]+[\\@\\#\\$\\%\\&\\(\\)\\[\\]\\{\\}\\_\\=\\<\\>\\+\\-\\!\\?\\*\\/\\|\\:\\;\\.\\,\\‘\\\"\\~\\^]+){10,}";
+        final String PASSWORD_PATTERN = "(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z])(?=.*[\\@\\#\\$\\%\\&\\(\\)\\[\\]\\{\\}\\_\\=\\<\\>\\+\\-\\!\\?\\*\\/\\|\\:\\;\\.\\,\\‘\\\"\\~\\^]).{10,}";
 
         pattern = Pattern.compile(PASSWORD_PATTERN);
         matcher = pattern.matcher(password);

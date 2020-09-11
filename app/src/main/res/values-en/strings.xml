@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Lab1-EN-JKhalil</string>
+    <string name="textEmail">Your email</string>
+    <string name="textPassword">Enter your password</string>
+    <string name="checkBoxPassword">Show your password</string>
+    <string name="buttonValide">VALIDATE YOUR PASSWORD</string>
+    <string name="textViewPasswordValide">The password is valid</string>
+    <string name="textViewPasswordInvalide">The password is invalid</string>
+</resources>
